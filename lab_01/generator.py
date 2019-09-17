@@ -32,7 +32,9 @@ def order_gen():
     m_id = r.randint(1, 1000)
     dor = f.date_of_birth().strftime('%Y-%m-%d')
 
-    cd = f.date_of_birth().strftime('%Y-%m-%d')
+    cd = dor.split('-')
+    cd[0] = str(int(cd[0]) + 1)
+    cd = "-".join(cd)
 
     aid = r.randint(100000, 50000000)
 
