@@ -1,3 +1,6 @@
+USE Factory	
+GO
+
 BULK INSERT Client
 FROM 'C:/Users/Tree/Desktop/Progs/meme-data-base/lab_01/client_data.txt'
 WITH (FIELDTERMINATOR = ' ; ', ROWTERMINATOR = '\n')
