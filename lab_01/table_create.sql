@@ -50,11 +50,14 @@ GO
 
 CREATE TABLE OrderInfo (
 	ID int IDENTITY(1,1) PRIMARY KEY,
-	ÑlientID int not null,
+	ClientID int not null,
 	ModelID int not null,
 	Date_of_receiving date not null,
 	Completion_date date not null,
 	Android_id int not null
 )
+GO
+
+USE master
 GO
 

@@ -30,3 +30,6 @@ BULK INSERT OrderInfo
 FROM 'C:/Users/Tree/Desktop/Progs/meme-data-base/lab_01/order_data.txt'
 WITH (FIELDTERMINATOR = ' ; ', ROWTERMINATOR = '\n')
 GO
+
+USE master
+GO

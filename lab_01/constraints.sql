@@ -32,9 +32,12 @@ GO
 
 alter table OrderInfo add
 		constraint ClientID_FK 
-			foreign key (ÑlientID) references Client(ID)
+			foreign key (ClientID) references Client(ID)
 			on delete cascade,
 		constraint OrdModelID_FK
 			foreign key (ModelID) references Models(ID)
 			on delete cascade
+GO
+
+USE master
 GO
