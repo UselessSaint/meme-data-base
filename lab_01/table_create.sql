@@ -25,7 +25,7 @@ GO
 CREATE TABLE Factory (
 	ID int IDENTITY(1,1) PRIMARY KEY,
 	Date_Of_Construction date not null,
-	RegionID int REFERENCES Region(ID) not null
+	RegionID int not null
 )
 GO
 
@@ -37,8 +37,8 @@ CREATE TABLE Models (
 GO
 
 CREATE TABLE Factory_Models_conection (
-	FactoryID int REFERENCES Factory(ID) not null,
-	ModelID int REFERENCES Models(ID) not null
+	FactoryID int not null,
+	ModelID int not null
 )
 GO
 
@@ -50,8 +50,8 @@ GO
 
 CREATE TABLE OrderInfo (
 	ID int IDENTITY(1,1) PRIMARY KEY,
-	Ñlient int REFERENCES Client(ID) not null,
-	ModelID int REFERENCES Models(ID) not null,
+	ÑlientID int not null,
+	ModelID int not null,
 	Date_of_receiving date not null,
 	Completion_date date not null,
 	Android_id int not null
