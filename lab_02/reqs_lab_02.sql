@@ -34,7 +34,7 @@ select T1.*
 from Client as T1
 where not Exists ( select OrderInfo.*
 				   from OrderInfo
-				   where OrderInfo.ClientID = T1.ID )
+				   where OrderInfo.Ñlient = T1.ID )
 GO
 
 -- 6 cmp + kv
@@ -88,7 +88,10 @@ from Models, (select ModelID, count(ModelID) as Num
 			  group by ModelID) as T1
 where Models.ID = T1.ModelID
 GO
-select * from #AmountOfOrders
+select * from #AmountOfOrders order by Num desc
+GO
+
+select * from tempdb.sys.tables
 GO
 
 -- 12
@@ -177,7 +180,27 @@ from Models, T1
 where Models.ID = T1.ModelID
 GO
 
+
+
 -- 23
+create table #recOtv ( Id int, Parent int)
+GO
+
+insert into #recOtv values (1, null), (2, 1), (3, 2), (4, null), (5, 4)
+GO
+
+select * from #recOtv
+GO
+
+with Tree as ( 
+	select r.Id, r.Parent, 0 as Level
+	from #recOtv as r
+	where r.Parent is null
+	union all
+	select r.Id, r.Parent, Level + 1
+	from #recOtv as r inner join Tree as t on r.Parent = t.Id )
+select * 
+from Tree
 
 -- 24
 with T1 as (select ModelID, count(ModelID) as Num
@@ -214,6 +237,7 @@ with T1 as (	select ID, Population, Name,
 select ID, Population, Name
 from T1
 where t = 1
+GO
 
 
 -------
