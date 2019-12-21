@@ -242,3 +242,34 @@ select * from tmp
 select * from history
 
 
+----- Instead OF
+
+create trigger DenyIns
+on tmp
+instead of insert
+as 
+begin
+	RAISERROR('Nope',10,1);
+end;
+
+drop trigger DenyIns
+go
+
+
+create procedure modInfo (@a int, @b int)
+as
+begin
+	select M.*
+	from Models as M inner join ( select *
+								  from OrderInfo
+								  where ModelID between @a and @b ) as T on M.ID = T.ModelID
+end
+go
+
+drop procedure modInfo
+
+exec modInfo 2, 100
+
+
+
+
