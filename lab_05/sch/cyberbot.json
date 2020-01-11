@@ -1,0 +1,86 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "root"
+  ],
+  "properties": {
+    "root": {
+      "$id": "#/properties/root",
+      "type": "array",
+      "title": "The Root Schema",
+      "items": {
+        "$id": "#/properties/root/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "fst_branch",
+          "snd_branch"
+        ],
+        "properties": {
+          "fst_branch": {
+            "$id": "#/properties/root/items/properties/fst_branch",
+            "type": "object",
+            "title": "The Fst_branch Schema",
+            "required": [
+              "Apples",
+              "Worms"
+            ],
+            "properties": {
+              "Apples": {
+                "$id": "#/properties/root/items/properties/fst_branch/properties/Apples",
+                "type": "integer",
+                "title": "The Apples Schema",
+                "default": 0,
+                "examples": [
+                  12
+                ]
+              },
+              "Worms": {
+                "$id": "#/properties/root/items/properties/fst_branch/properties/Worms",
+                "type": "integer",
+                "title": "The Worms Schema",
+                "default": 0,
+                "examples": [
+                  33
+                ]
+              }
+            }
+          },
+          "snd_branch": {
+            "$id": "#/properties/root/items/properties/snd_branch",
+            "type": "object",
+            "title": "The Snd_branch Schema",
+            "required": [
+              "Apples",
+              "Worms"
+            ],
+            "properties": {
+              "Apples": {
+                "$id": "#/properties/root/items/properties/snd_branch/properties/Apples",
+                "type": "integer",
+                "title": "The Apples Schema",
+                "default": 0,
+                "examples": [
+                  22
+                ]
+              },
+              "Worms": {
+                "$id": "#/properties/root/items/properties/snd_branch/properties/Worms",
+                "type": "integer",
+                "title": "The Worms Schema",
+                "default": 0,
+                "examples": [
+                  31
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

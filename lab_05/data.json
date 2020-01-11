@@ -1,0 +1,41 @@
+{
+    "root":
+    [
+        {
+            "fst_branch":
+            {
+                "Apples": 12,
+                "Worms": 33
+            },
+            "snd_branch":
+            {
+                "Apples": 22,
+                "Worms": 31
+            }
+        },
+        {
+            "fst_branch":
+            {
+                "Apples": 122,
+                "Worms": 313
+            },
+            "snd_branch":
+            {
+                "Apples": 242,
+                "Worms": 321
+            }
+        },
+        {
+            "fst_branch":
+            {
+                "Apples": 152,
+                "Worms": 133
+            },
+            "snd_branch":
+            {
+                "Apples": 222,
+                "Worms": 123
+            }
+        }
+    ]
+}

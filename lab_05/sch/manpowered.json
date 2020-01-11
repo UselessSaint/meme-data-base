@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "root"
+  ],
+  "properties": {
+    "root": {
+      "type": "array",
+      "title": "The Root Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "fst_branch",
+          "snd_branch"
+        ],
+        "properties": {
+          "fst_branch": {
+            "type": "object",
+            "title": "The Fst_branch Schema",
+            "required": [
+              "Apples",
+              "Worms"
+            ],
+            "properties": {
+              "Apples": {
+                "type": "string",
+                "title": "The Apples Schema"
+              },
+              "Worms": {
+                "type": "integer",
+                "title": "The Worms Schema"
+              }
+            }
+          },
+          "snd_branch": {
+            "type": "object",
+            "title": "The Snd_branch Schema",
+            "required": [
+              "Apples",
+              "Worms"
+            ],
+            "properties": {
+              "Apples": {
+                "type": "integer",
+                "title": "The Apples Schema"
+              },
+              "Worms": {
+                "type": "integer",
+                "title": "The Worms Schema"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
